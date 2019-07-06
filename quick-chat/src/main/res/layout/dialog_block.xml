@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round"
+    android:minWidth="250dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:text="are you sure you want to rescind the chat invitation?"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/text"
+        android:text="YES"
+        android:textSize="18dp" />
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@null"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:text="NO"
+        android:textSize="18dp"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

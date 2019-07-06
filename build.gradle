@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven{
+            url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
+        }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.1"
+    minSdkVersion = 16
+    targetSdkVersion = 23
+
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+    lintAbortOnError = false
+    // QuickBlox SDK version
+    qbSdkVersion = '3.7.0'
+
+    versionName = '3.7.0'
+
+    testRunnerVersion = "0.4.1"
+
+
+    // Dependency versions
+    playServicesVersion = '11.4.2'
+    supportV4Version = '27.0.2'
+    appcompatV7Version = '27.0.2'
+    recyclerviewV7Version = '27.0.2'
+    supportAnnotationsVersion = '27.0.2'
+    designVersion = '27.0.2'
+
+    uilVersion = '1.9.0'
+    glideVersion = '3.6.1'
+    pullToRefreshVersion = '3.2.3'
+    stickyListHeaders = '2.7.0'
+    robotoTextViewVersion = '4.0.0'
+    stickersVersion = '0.7.3'
+    crashlyticsVersion = '2.2.2'
+}

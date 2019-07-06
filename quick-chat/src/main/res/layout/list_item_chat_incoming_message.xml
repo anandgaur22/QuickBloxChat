@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_chat_message_container"
+    style="@style/MessageContainerStyle"
+    android:gravity="start"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/text_message_info"
+      android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:padding="0dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        tools:text="10:50 AM"
+        android:layout_width="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:elevation="2dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/layout_message_content_container"
+                style="@style/MessageContentContainerStyle"
+                android:background="@drawable/rectangle"
+                >
+
+
+                <TextView
+                    android:id="@+id/text_image_message"
+                    style="@style/MessageTextStyle"
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_centerVertical="true"
+
+                    android:textColor="@color/colorPrimaryDark1"
+                    tools:text="Test message" />
+
+                <ImageView
+                    android:id="@+id/image_message_attachment"
+                    android:layout_width="@dimen/chat_message_attachment_size"
+                    android:layout_height="@dimen/chat_message_attachment_size"
+                    android:scaleType="centerCrop" />
+
+                <ProgressBar
+                    android:id="@+id/progress_message_attachment"
+                    style="@style/CenterProgressBarStyle"
+                    android:theme="@style/AppTheme.BlueAccent" />
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/text_message_author"
+                    style="@style/MessageAuthorStyle"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    tools:text="User 2" />
+            </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

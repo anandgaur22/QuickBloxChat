@@ -1,0 +1,60 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParent"
+    android:id="@+id/layout_root"
+    android:background="@color/black">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+    >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            app:srcCompat="@drawable/back"
+            android:layout_width="@dimen/dp40"
+            android:padding="@dimen/dp5"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/buddy_logo"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_option_"
+            android:layout_width="@dimen/dp40"
+            android:padding="@dimen/dp5"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/image_full_view"
+        style="@style/MatchParent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp60"
+        android:adjustViewBounds="true" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_show_image"
+        style="@style/WrapContent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

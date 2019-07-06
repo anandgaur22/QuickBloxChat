@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    style="@style/ListItem"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="30dp"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_dialog_icon"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:src="@drawable/ic_chat_group" />
+
+    <ImageView
+        android:id="@+id/iv_online_indecator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="-13dp"
+        android:layout_marginStart="-13dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/image_dialog_icon"
+        android:layout_toRightOf="@+id/image_dialog_icon"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_online_indecator"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <!--
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_dialog_icon"
+
+            android:src="@drawable/ic_chat_group" />-->
+    <!-- <ImageView
+         android:layout_gravity="center"
+         android:id="@+id/image_dialog_icon"
+         style="@style/ListItemIconStyle"
+         tools:ignore="ContentDescription"
+         tools:src="@drawable/ic_chat_group" />-->
+
+    <RelativeLayout
+        android:id="@+id/RLname_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/image_dialog_icon">
+
+        <TextView
+            android:id="@+id/text_dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenna"
+            android:textColor="@color/c_black"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/TVdistance_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:text="9m"
+            android:visibility="gone"
+            android:textColor="@color/c_black"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLname_msg"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/image_dialog_icon">
+
+        <TextView
+            android:id="@+id/text_dialog_last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Hey, what’s up?"
+            android:textColor="@color/subtxtcolor"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/relative"
+            android:background="@drawable/roundcolor">
+
+            <TextView
+                android:id="@+id/text_dialog_unread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp5"
+        >
+
+
+        <TextView
+            android:layout_toStartOf="@+id/text_dialog_unread_count"
+            android:layout_below="@+id/text_dialog_name"
+            android:id="@+id/text_dialog_last_message"
+            style="@style/DialogLastMessageStyle"
+            tools:text="Long last message to see how margin on the right side works"
+            android:layout_toLeftOf="@+id/text_dialog_unread_count" />
+
+        <TextView
+            android:layout_marginEnd="@dimen/dp5"
+            android:id="@+id/text_dialog_unread_count"
+            style="@style/DialogUnreadCounterStyle"
+            android:visibility="visible"
+            tools:text="4"
+            android:layout_marginRight="@dimen/dp5" />
+
+        <View
+            android:layout_below="@+id/text_dialog_last_message"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>-->
+
+
+</RelativeLayout>

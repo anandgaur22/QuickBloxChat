@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    style="@style/MatchParent"
+    tools:ignore="RtlHardcoded,RtlSymmetry"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/host_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/roundshapeforsettingbtn"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_back_black_arrow"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/buddy_logo"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="@dimen/dp120"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardViewsearchmessages"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            android:visibility="gone"
+            app:cardUseCompatPadding="true">
+
+            <EditText
+                android:id="@+id/searchmessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="Search member"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="5dp"
+                android:inputType="textCapWords"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+        </androidx.cardview.widget.CardView>
+        <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+            android:id="@+id/swipy_refresh_layout"
+            style="@style/MatchParent"
+            app:srl_direction="bottom">
+
+            <ListView
+                android:id="@+id/list_dialogs_chats"
+                style="@style/ListViewWithoutDividerStyle"
+                android:visibility="invisible" />
+        </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_chat_empty"
+        style="@style/MatchWidth"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onStartNewChatClick"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+        <RelativeLayout
+            android:id="@+id/RLmessages_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/IVNoMessages"
+                android:layout_width="167dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_messages_icon"
+                tools:ignore="VectorDrawableCompat" />
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/WrapContent"
+                android:text="@string/chat_empty_you_are_alone_here"
+                android:textColor="@color/text_color_dark_grey"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/IVNoMessages"
+                android:layout_margin="@dimen/dp10"
+                app:robotoTypeface="roboto_medium" />
+
+
+        </RelativeLayout>
+        <com.devspark.robototextview.widget.RobotoTextView
+            style="@style/WrapContent"
+            android:text="@string/chat_empty_start_new_chat"
+            android:textColor="@color/text_color_green"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:robotoTypeface="roboto_medium" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_dialogs"
+        style="@style/CenterProgressBarStyle"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_dialogs_new_chat"
+        style="@style/FabStyle"
+        android:onClick="onStartNewChatClick"
+        android:src="@drawable/ic_action_start_chat"
+        android:visibility="gone" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

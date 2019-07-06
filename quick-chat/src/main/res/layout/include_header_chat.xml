@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/header"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            app:srcCompat="@drawable/back"
+            android:layout_width="@dimen/dp40"
+            android:padding="@dimen/dp5"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/buddy_logo"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="@dimen/dp120"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+</com.google.android.material.appbar.AppBarLayout>

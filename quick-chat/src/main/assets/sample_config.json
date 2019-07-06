@@ -1,0 +1,13 @@
+{
+    "users_tag": "car,man",
+    "users_password": "12345678",
+    "port": 5223,
+    "socket_timeout": 300,
+    "keep_alive": true,
+    "use_tls": true,
+    "auto_join": false,
+    "auto_mark_delivered": true,
+    "reconnection_allowed": true,
+    "allow_listen_network": true
+}
+
